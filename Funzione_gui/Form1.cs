@@ -173,12 +173,12 @@ namespace Funzione_gui
                     FileName = "Percentuale alunni " + DateTime.Now.ToString("dd-MM-yyyy"),
                     DefaultExt = ".txt"
                 };
+
                 if (saveFileDialoge.ShowDialog() == DialogResult.OK)
                 {
-
                     string selected_path = saveFileDialoge.FileName;
 
-                 
+                    TextWriter writer = new StreamWriter(selected_path);
                     writer.WriteLine("Registrati in data: " + DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss tt"));
                     writer.WriteLine("---------------------------------");
                     writer.WriteLine(" CLASSE | Maschi | Femmine | TOTALE |");
