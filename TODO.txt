@@ -1,9 +1,6 @@
 TODO:
 
 Tab:
-	-Rimuovere tutti i dati 
-	-Rimuovere dati (Selezionato)
-	-Restore dati nella tab (da ogni tipo di esportazione)
 
 Exp:
 	-exp type: csv, cmd.
@@ -11,3 +8,9 @@ Exp:
 Impostazioni:
 	-Update
 	-
+	
+	
+	
+	////////////////////////////////////////////
+	
+	Exp vuoto

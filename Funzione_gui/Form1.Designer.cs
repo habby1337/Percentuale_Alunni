@@ -1,4 +1,6 @@
-﻿namespace Funzione_gui
+﻿using System.Drawing;
+
+namespace Funzione_gui
 {
     partial class Form1
     {
@@ -48,13 +50,17 @@
             this.HTot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bexp = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.boption = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bimport = new System.Windows.Forms.Button();
+            this.bclear = new System.Windows.Forms.Button();
+            this.bdelete = new System.Windows.Forms.Button();
             this.cbType = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.boption = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.pBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.tbF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -156,6 +162,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -182,7 +189,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.dataGridView1.Location = new System.Drawing.Point(368, 6);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -201,8 +208,9 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Goldenrod;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(409, 345);
+            this.dataGridView1.Size = new System.Drawing.Size(422, 345);
             this.dataGridView1.TabIndex = 6;
             // 
             // HClasse
@@ -231,6 +239,7 @@
             // 
             // bexp
             // 
+            this.bexp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.bexp.FlatAppearance.BorderColor = System.Drawing.Color.Goldenrod;
             this.bexp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bexp.Location = new System.Drawing.Point(10, 429);
@@ -238,7 +247,7 @@
             this.bexp.Size = new System.Drawing.Size(409, 35);
             this.bexp.TabIndex = 7;
             this.bexp.Text = "Esporta";
-            this.bexp.UseVisualStyleBackColor = true;
+            this.bexp.UseVisualStyleBackColor = false;
             this.bexp.Click += new System.EventHandler(this.bexp_Click);
             // 
             // panel2
@@ -257,16 +266,32 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(341, 476);
+            this.panel2.Size = new System.Drawing.Size(341, 509);
             this.panel2.TabIndex = 8;
             // 
-            // panel3
+            // button3
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(783, 476);
-            this.panel3.TabIndex = 10;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Goldenrod;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(158, 429);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(115, 35);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "About";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // boption
+            // 
+            this.boption.FlatAppearance.BorderColor = System.Drawing.Color.Goldenrod;
+            this.boption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boption.Location = new System.Drawing.Point(37, 429);
+            this.boption.Name = "boption";
+            this.boption.Size = new System.Drawing.Size(115, 35);
+            this.boption.TabIndex = 6;
+            this.boption.Text = "Impostazioni";
+            this.boption.UseVisualStyleBackColor = true;
+            this.boption.Click += new System.EventHandler(this.boption_Click);
             // 
             // label4
             // 
@@ -279,17 +304,66 @@
             this.label4.Text = "Percentuale\r\nAlunni";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(989, 509);
+            this.panel3.TabIndex = 10;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.panel1.Controls.Add(this.bimport);
+            this.panel1.Controls.Add(this.bclear);
+            this.panel1.Controls.Add(this.bdelete);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.cbType);
             this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.pBar1);
             this.panel1.Controls.Add(this.bexp);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(358, 0);
+            this.panel1.Location = new System.Drawing.Point(347, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(425, 476);
+            this.panel1.Size = new System.Drawing.Size(642, 509);
             this.panel1.TabIndex = 9;
+            // 
+            // bimport
+            // 
+            this.bimport.FlatAppearance.BorderColor = System.Drawing.Color.Goldenrod;
+            this.bimport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bimport.Location = new System.Drawing.Point(453, 130);
+            this.bimport.Name = "bimport";
+            this.bimport.Size = new System.Drawing.Size(174, 35);
+            this.bimport.TabIndex = 17;
+            this.bimport.Text = "Importa [XLSX]";
+            this.bimport.UseVisualStyleBackColor = true;
+            this.bimport.Click += new System.EventHandler(this.bimport_Click);
+            // 
+            // bclear
+            // 
+            this.bclear.FlatAppearance.BorderColor = System.Drawing.Color.Goldenrod;
+            this.bclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bclear.Location = new System.Drawing.Point(453, 20);
+            this.bclear.Name = "bclear";
+            this.bclear.Size = new System.Drawing.Size(174, 35);
+            this.bclear.TabIndex = 16;
+            this.bclear.Text = "Pulisci tutto";
+            this.bclear.UseVisualStyleBackColor = true;
+            this.bclear.Click += new System.EventHandler(this.bclear_Click);
+            // 
+            // bdelete
+            // 
+            this.bdelete.FlatAppearance.BorderColor = System.Drawing.Color.Goldenrod;
+            this.bdelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bdelete.Location = new System.Drawing.Point(453, 73);
+            this.bdelete.Name = "bdelete";
+            this.bdelete.Size = new System.Drawing.Size(174, 35);
+            this.bdelete.TabIndex = 9;
+            this.bdelete.Text = "Rimuovi Riga";
+            this.bdelete.UseVisualStyleBackColor = true;
+            this.bdelete.Click += new System.EventHandler(this.bdelete_Click);
             // 
             // cbType
             // 
@@ -317,37 +391,22 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Formato esportazione:";
             // 
-            // boption
+            // pBar1
             // 
-            this.boption.FlatAppearance.BorderColor = System.Drawing.Color.Goldenrod;
-            this.boption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boption.Location = new System.Drawing.Point(37, 429);
-            this.boption.Name = "boption";
-            this.boption.Size = new System.Drawing.Size(115, 35);
-            this.boption.TabIndex = 6;
-            this.boption.Text = "Impostazioni";
-            this.boption.UseVisualStyleBackColor = true;
-            this.boption.Click += new System.EventHandler(this.boption_Click);
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Goldenrod;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(158, 429);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 35);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "About";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.pBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.pBar1.ForeColor = System.Drawing.Color.Goldenrod;
+            this.pBar1.Location = new System.Drawing.Point(10, 470);
+            this.pBar1.Name = "pBar1";
+            this.pBar1.Size = new System.Drawing.Size(409, 35);
+            this.pBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pBar1.TabIndex = 18;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.ClientSize = new System.Drawing.Size(783, 476);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(989, 509);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
@@ -395,6 +454,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button boption;
+        private System.Windows.Forms.Button bdelete;
+        private System.Windows.Forms.Button bimport;
+        private System.Windows.Forms.Button bclear;
+        public System.Windows.Forms.ProgressBar pBar1;
     }
 }
 
