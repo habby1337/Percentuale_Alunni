@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -7,12 +6,41 @@ namespace Funzione_gui
 {
     public partial class Form1 : Form
     {
+        private int pos = 0;
+        private string stuff = "Made with <3 by @Fede.Tensi.";
+
         public Form1()
         {
+
             InitializeComponent();
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+
+            ldata.Text = "Data: " + DateTime.Now.ToString("dd/MM/yyyy");
+            ltime.Text = "Orario: " + DateTime.Now.ToString("HH:mm:ss");
+            lcred.Text = "";
+            Text = "Percentuale Alunni :: Home [" + DateTime.Now.ToString("HH:mm:ss") + "]";
+            Update();
         }
 
-       
+
+
+
+        /*
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            ltime.Text = "Orario: " + DateTime.Now.ToString("HH:mm:ss");
+            Text = "Percentuale Alunni :: Home [" + DateTime.Now.ToString("HH:mm:ss") + "]";
+            Update();
+
+            if (pos < stuff.Length)
+            { lcred.Text += (stuff.Substring(pos, 1));  ++pos; }
+            else { lcred.Text = ""; pos = 0; }
+        }
+        */
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
             // Display the ProgressBar control.
@@ -322,6 +350,8 @@ namespace Funzione_gui
                 errorBox(ex);
             }
         }
+
+
     }
 }
 

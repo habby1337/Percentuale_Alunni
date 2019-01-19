@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Funzione_gui.Properties {
+namespace PercentualeAlunni.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

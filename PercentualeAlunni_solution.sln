@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funzione_gui", "Funzione_gui\Funzione_gui.csproj", "{458FE9BD-CB9E-49AA-89D1-DB652B850F62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PercentualeAlunni", "Funzione_gui\PercentualeAlunni.csproj", "{458FE9BD-CB9E-49AA-89D1-DB652B850F62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

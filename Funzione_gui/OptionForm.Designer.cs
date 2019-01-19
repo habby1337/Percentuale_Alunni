@@ -32,14 +32,14 @@
             this.lver = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.bupdate = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.TBLog = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // lver
             // 
             this.lver.AutoSize = true;
             this.lver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.lver.Location = new System.Drawing.Point(39, 123);
+            this.lver.Location = new System.Drawing.Point(143, 123);
             this.lver.Name = "lver";
             this.lver.Size = new System.Drawing.Size(91, 16);
             this.lver.TabIndex = 2;
@@ -61,7 +61,7 @@
             // 
             this.bupdate.FlatAppearance.BorderColor = System.Drawing.Color.Goldenrod;
             this.bupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bupdate.Location = new System.Drawing.Point(42, 142);
+            this.bupdate.Location = new System.Drawing.Point(79, 142);
             this.bupdate.Name = "bupdate";
             this.bupdate.Size = new System.Drawing.Size(218, 35);
             this.bupdate.TabIndex = 10;
@@ -69,13 +69,18 @@
             this.bupdate.UseVisualStyleBackColor = true;
             this.bupdate.Click += new System.EventHandler(this.bupdate_Click);
             // 
-            // richTextBox1
+            // TBLog
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(32, 214);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(313, 165);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
+            this.TBLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.TBLog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TBLog.ForeColor = System.Drawing.Color.White;
+            this.TBLog.Location = new System.Drawing.Point(32, 224);
+            this.TBLog.Name = "TBLog";
+            this.TBLog.ReadOnly = true;
+            this.TBLog.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.TBLog.Size = new System.Drawing.Size(313, 165);
+            this.TBLog.TabIndex = 11;
+            this.TBLog.Text = "";
             // 
             // OptionForm
             // 
@@ -83,7 +88,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(390, 412);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.TBLog);
             this.Controls.Add(this.bupdate);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lver);
@@ -106,6 +111,6 @@
         private System.Windows.Forms.Label lver;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button bupdate;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox TBLog;
     }
 }
