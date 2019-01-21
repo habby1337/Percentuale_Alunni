@@ -13,8 +13,8 @@ namespace Funzione_gui
         {
 
             InitializeComponent();
-            timer1.Enabled = true;
-            timer1.Interval = 1000;
+            /*timer1.Enabled = true;
+            timer1.Interval = 1000;*/
 
             ldata.Text = "Data: " + DateTime.Now.ToString("dd/MM/yyyy");
             ltime.Text = "Orario: " + DateTime.Now.ToString("HH:mm:ss");
@@ -26,7 +26,7 @@ namespace Funzione_gui
 
 
 
-        /*
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
 
@@ -35,10 +35,10 @@ namespace Funzione_gui
             Update();
 
             if (pos < stuff.Length)
-            { lcred.Text += (stuff.Substring(pos, 1));  ++pos; }
+            { lcred.Text += stuff.Substring(pos, 1);  ++pos; }
             else { lcred.Text = ""; pos = 0; }
         }
-        */
+        
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -351,7 +351,7 @@ namespace Funzione_gui
             }
         }
 
-
+        
     }
 }
 
