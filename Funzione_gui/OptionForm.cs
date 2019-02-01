@@ -158,5 +158,10 @@ namespace Funzione_gui
 
             ApplicationForm.Exit();
         }
+
+        private void OptionForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

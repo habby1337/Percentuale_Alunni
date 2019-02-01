@@ -111,5 +111,10 @@ namespace Funzione_gui
         {
             MessageBox.Show("TEST");
         }
+
+        private void AboutBox_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

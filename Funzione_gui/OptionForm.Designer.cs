@@ -101,6 +101,7 @@
             this.Name = "OptionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Percentuale Alunni :: Opzioni";
+            this.Load += new System.EventHandler(this.OptionForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
